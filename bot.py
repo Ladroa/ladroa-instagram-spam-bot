@@ -90,34 +90,34 @@ if __name__ == "__main__":
     PROXIES = LoadProxies("./proxy.txt")
     print("")
 
-    username = GetInput("The account username you want to complain about:")
-    userid = GetInput("The account number you want to complain about:")
-    useproxy = GetInput("Do you want to use proxy? [Yes No]:")
-    if (useproxy == "Yes"):
+    username = GetInput("Şikayet etmek istediğiniz hesap kullanıcı adı:")
+    userid = GetInput("Şikayet etmek istediğiniz hesap numarası:")
+    useproxy = GetInput("Proxy kullanmak istiyor musunuz? [Evet Hayır]:")
+    if (useproxy == "Evet"):
         useproxy = True
-    elif (useproxy == "No"):
+    elif (useproxy == "Hayır"):
         useproxy = False
     else:
-        PrintFatalError("Please just enter 'Yes' or 'No'!")
+        PrintFatalError("Lütfen sadece 'Evet' veya 'Hayır' girin!")
         exit(0)
-    usemultithread = GetInput("Do you want to use multithreading? [Yes / No] (Do not use this feature if you have too many users or if your computer is slow!):")
+    usemultithread = GetInput("Çoklu iş parçacığı kullanmak istiyor musunuz? [Evet / Hayır] (Çok fazla kullanıcınız varsa veya bilgisayarınız yavaşsa bu özelliği kullanmayın!):")
     
-    if (usemultithread == "Yes"):
+    if (usemultithread == "Evet"):
         usemultithread = True
-    elif (usemultithread == "No"):
+    elif (usemultithread == "Hayır"):
         usemultithread = False
     else:
-        PrintFatalError("Please just enter 'Yes' or 'No'!")
+        PrintFatalError("Lütfen sadece 'Evet' veya 'Hayır' girin!")
         exit(0)
     
     PrintChoices()
-    reasonid = GetInput("Please select one of the reasons for the above complaint (ex: 1 for spam):")
+    reasonid = GetInput("Lütfen yukarıdaki şikayetin nedenlerinden birini seçin (ör. spam için 1):")
 
     
     
     
     print("")
-    PrintStatus("Starting!")
+    PrintStatus("Ladroa spam bot başlatılıyor")
     print("")
 
     if (usemultithread == False):
